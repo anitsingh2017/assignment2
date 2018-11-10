@@ -1,0 +1,73 @@
+.bookingform {
+  width: 250px;
+  clear: both;
+    margin: auto;
+    padding: 10px;
+}
+
+h1{
+	color:white;
+}
+
+.bookingform input{
+  width: 100%;
+  clear: both;
+}
+
+
+.admin {
+  width: 300px;
+  clear: both;
+    margin: auto;
+    padding: 10px;
+}
+
+.admin input{
+  width: 100%;
+  clear: both;
+}
+
+/*
+	sets the p tag used in the html to colour yellow
+*/
+p {
+	
+	color: yellow;
+}
+
+/*
+	sets the button tag used in the html to font colour black and background color to pink
+*/
+.button{
+	
+	color: black;
+	background-color: pink;
+}
+/*
+	sets the table th tr tag used in the html to red and border/outline to white
+*/
+table, td, th,tr {
+    border: 2px solid white;
+    color: red;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+td {
+    height: 10;
+    vertical-align: bottom;
+}
+
+
+
+
+
+
+
+
+
+
+

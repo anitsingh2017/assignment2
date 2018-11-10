@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="xhr.js"></script>
+<script type="text/javascript" src="bookingajax.js"> </script>
+
+<meta http-equiv="Content-Type" content="text/html"; charset=utf-8" />
+<link rel="stylesheet" href="styles/styles.css">
+<title> Booking a taxi system </title>
+	
+
+<h1 align="center"> cabsOnline </h1>
+</head>
+
+<body background="taxi.jpg">
+ 
+   <div class="bookingform">
+       <form>
+    <span style="color:white;font-weight:bold">customer name</span> <input type="text" name="customername" onblur="inputValidate('validate.php', 'checkName', customername.value)">
+	<div id="checkName"></div>
+	
+	<span style="color:white;font-weight:bold">Customer phone:</span> <input required type="text" name="phone" onblur="inputValidate('validate.php', 'checkPhone', phone.value)">
+	<div id="checkPhone"></div>
+	
+	<span style="color:white;font-weight:bold">Date:</span>  <input type="date" name="date" onblur="inputValidate('validate.php', 'checkDate', date.value)">
+	<div id="checkDate"></div>
+	
+	<span style="color:white;font-weight:bold">Time:</span> <input type="time" name="time" onblur="inputValidate('validate.php', 'checkTime', time.value)">
+	 <div id="checkTime"></div>
+	
+	 <span style="color:white;font-weight:bold">Pick up Street Number:</span> <input required type="text" name="streetnumber" onblur="inputValidate('validate.php', 'checkpickupStreet', streetnumber.value)">
+	 <div id="checkpickupStreet"></div>
+	 
+	 <span style="color:white;font-weight:bold">Pick up Street Name:</span> <input required type="text" name="streetname" onblur="inputValidate('validate.php', 'checkpickupName', streetname.value)">
+	 <div id="checkpickupName"></div>
+	 
+	 <span style="color:white;font-weight:bold">Destination Suburb:</span> <input required type="text" name="destination" onblur="inputValidate('validate.php', 'checkDestination', destination.value)">
+	 <div id="checkDestination"></div>
+	 <br>
+	<input type="button" name="submit" class="button" onClick = "getBookingDetails('bookingprocess.php','targetDiv', customername.value, phone.value,streetnumber.value,streetname.value,destination.value,date.value,time.value)" value= "book taxi">
+	 <input type="reset" name= "reset" class="button" value="reset">
+	</form>
+	
+       <div id="targetDiv"> 
+	    <p>Once the booking is made your details will be printed here </p>  
+       </div> 
+	   
+     </div>
+</body>
+</html>
